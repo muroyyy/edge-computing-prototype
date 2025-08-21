@@ -1,7 +1,11 @@
 import React from 'react';
-import { GraduationCap, Bell, User } from 'lucide-react';
+import { GraduationCap, Bell, User, LogOut } from 'lucide-react';
 
-const Header = () => {
+interface HeaderProps {
+  onLogout: () => void;
+}
+
+const Header = ({ onLogout }: HeaderProps) => {
   return (
     <header className="bg-white border-b border-gray-200 shadow-sm">
       <div className="px-6 py-4">
@@ -34,6 +38,13 @@ const Header = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                 <User className="w-4 h-4 text-white" />
               </div>
+              <button
+                onClick={onLogout}
+                className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                title="Logout"
+              >
+                <LogOut className="w-5 h-5" />
+              </button>
             </div>
           </div>
         </div>
