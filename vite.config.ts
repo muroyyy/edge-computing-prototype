@@ -10,6 +10,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist', // default, but explicit for clarity
-    sourcemap: true // helpful for debugging production issues
+    sourcemap: true // helpful for debugging production issuess
   }
 });
